@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>तुलसी राम जी पुचका वाला</title>
-    <style>
-        body {
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="तुलसी राम जी पुचका वाला - Enjoy the most delicious and spicy Puchka (Golgappa) with fresh and crispy taste.">
+    <meta name="keywords" content="पुचका, गोलगप्पे, पानीपुरी, स्ट्रीट फूड, तुलसी राम जी पुचका, बेस्ट पुचका, चटपटा खाना, puchka, golgappa, panipuri, street food, best panipuri,Nawalgarh Puchka place,nawalgarhpuchakapalace , Nawalgarh Puchka , spicy snacks">
+    <meta name="author" content="Tulsi Ram Ji Puchka Wala">
+    <title>तुलसी राम जी पुचका वाला - सबसे स्वादिष्ट पानीपुरी</title>
+    
+    <!-- Open Graph (For better sharing on social media) -->
+    <meta property="og:title" content="तुलसी राम जी पुचका वाला - सबसे स्वादिष्ट पानीपुरी">
+    <meta property="og:description" content="सबसे स्वादिष्ट और मसालेदार पुचका का आनंद लें, ताजा और कुरकुरा!">
+    <meta property="og:url" content="https://nawalgarhpuchakapalace.com">
+  <style>
+     body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 10px;
@@ -15,15 +24,32 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            background-color: #fff3f3;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
         }
 
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Header */
         .header {
             color: red;
             margin-bottom: 20px;
             display: flex;
             justify-content: center;
             gap: 20px;
-
+            opacity: 0;
+            animation: fadeIn 1.2s forwards 0.5s;
         }
 
         .small-text {
@@ -31,7 +57,6 @@
             font-size: clamp(1rem, 2vw, 1.2em);
             margin: 10px 0;
             font-weight: bold;
-        
         }
 
         .shop-name {
@@ -39,52 +64,59 @@
             font-size: clamp(1.5rem, 5vw, 3em);
             font-weight: bold;
             margin: 20px 0;
-            word-wrap: break-word;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards 0.8s;
         }
 
-        .address {
+        .address, .contact {
             color: red;
-            margin: 10px 0;
             font-size: clamp(0.9rem, 1.8vw, 1.1em);
+            opacity: 0;
+            animation: fadeIn 1.7s forwards 1s;
         }
 
-        .contact {
-            color: red;
-            margin: 10px 0;
-            font-size: clamp(0.9rem, 1.8vw, 1.1em);
-        }
-
+        /* Menu table */
         .menu-table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
             font-size: clamp(0.8rem, 1.5vw, 1em);
             margin-bottom: 40px;
+            opacity: 0;
+            animation: fadeIn 2s forwards 1.2s;
         }
-
-
 
         .menu-table th {
             background-color: red;
             color: white;
-            padding: clamp(5px, 1.5vw, 10px);
+            padding: 10px;
             border: 1px solid #ddd;
+            transition: transform 0.3s ease-in-out;
         }
 
         .menu-table td {
             border: 1px solid red;
-            padding: clamp(5px, 1.5vw, 10px);
+            padding: 10px;
             color: red;
+            transition: transform 0.3s ease-in-out;
         }
 
+        /* Hover effect on table */
+        .menu-table th:hover,
+        .menu-table td:hover {
+            background-color: #ffcccc;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
         .footer {
             margin-top: auto;
-
             padding: 25px;
             background-color: #ffebee;
-            
             border-radius: 10px;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            opacity: 0;
+            animation: fadeIn 2.5s forwards 1.5s;
         }
 
         .contact-buttons {
@@ -102,25 +134,16 @@
             color: white;
             text-decoration: none;
             border-radius: 5px;
-            font-size: clamp(0.9rem, 1.8vw, 1.1em);
-            transition: background-color 0.3s;
+            font-size: 1.1em;
+            transition: background-color 0.3s, transform 0.3s;
         }
 
         .contact-button:hover {
             background-color: darkred;
-        }
-
-        .contact-button img {
-            width: 24px;
-            height: 24px;
-            margin-right: 8px;
+            transform: scale(1.1);
         }
 
         @media screen and (max-width: 768px) {
-            body {
-                padding: 5px;
-            }
-
             .menu-table {
                 display: block;
                 overflow-x: auto;
@@ -158,7 +181,7 @@
                 display: none;
             }
         }
-    </style>
+  </style>
 </head>
 <body>
     <div class="header">
