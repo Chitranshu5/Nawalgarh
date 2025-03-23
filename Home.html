@@ -5,111 +5,192 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>तुलसी राम जी पुचका वाला</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Add Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        * {
+            box-sizing: border-box;
             margin: 0;
-            padding: 10px;
-            text-align: center;
-            max-width: 1200px;
-            margin: 0 auto;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            padding: 15px;
+            background: #fff5f5;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
         }
 
+        /* Header Section */
         .header {
-            color: red;
-            margin-bottom: 20px;
+            background: white;
+            padding: 12px;
+            border-radius: 12px;
+            margin: 10px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 2px 8px rgba(231, 76, 60, 0.1);
         }
 
         .small-text {
-            color: red;
-            font-size: clamp(1rem, 2vw, 1.2em);
-            margin: 10px 0;
+            color: #e74c3c;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
         }
 
+        /* Shop Name */
         .shop-name {
-            color: red;
-            font-size: clamp(1.5rem, 5vw, 3em);
-            font-weight: bold;
+            color: #c0392b;
+            font-size: clamp(1.8rem, 6vw, 2.5rem);
+            font-weight: 700;
             margin: 20px 0;
-            word-wrap: break-word;
+            text-align: center;
+            line-height: 1.3;
+            padding: 0 10px;
         }
 
-        .address {
-            color: red;
+        /* Address & Contact */
+        .address, .contact {
+            color: #e74c3c;
+            font-size: 15px;
             margin: 10px 0;
-            font-size: clamp(0.9rem, 1.8vw, 1.1em);
+            padding: 12px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            line-height: 1.5;
         }
 
-        .contact {
-            color: red;
-            margin: 10px 0;
-            font-size: clamp(0.9rem, 1.8vw, 1.1em);
-        }
-
+        /* Menu Table - Mobile First */
         .menu-table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
-            font-size: clamp(0.8rem, 1.5vw, 1em);
-            margin-bottom: 40px;
+            margin: 20px 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .menu-table th,
+        .menu-table td {
+            padding: 12px;
+            text-align: center;
         }
 
         .menu-table th {
-            background-color: red;
+            background: #e74c3c;
             color: white;
-            padding: clamp(5px, 1.5vw, 10px);
-            border: 1px solid #ddd;
+            font-size: 14px;
+            font-weight: 600;
         }
 
         .menu-table td {
-            border: 1px solid red;
-            padding: clamp(5px, 1.5vw, 10px);
-            color: red;
+            color: #333;
+            border-bottom: 1px solid #ffe6e6;
+            font-size: 13px;
         }
 
+        /* Footer & Contact Buttons */
         .footer {
             margin-top: auto;
-            padding: 20px;
-            background-color: #ffebee;
-            border-top: 2px solid red;
+            padding: 20px 15px;
+            background: white;
         }
 
         .contact-buttons {
             display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 400px;
+            margin: 0 auto;
         }
 
         .contact-button {
-            display: inline-flex;
+            display: flex;
             align-items: center;
-            padding: 10px 20px;
-            background-color: red;
+            justify-content: center;
+            padding: 12px;
+            background: #e74c3c;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
-            font-size: clamp(0.9rem, 1.8vw, 1.1em);
-            transition: background-color 0.3s;
-        }
-
-        .contact-button:hover {
-            background-color: darkred;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: transform 0.2s ease;
         }
 
         .contact-button img {
-            width: 24px;
-            height: 24px;
+            width: 20px;
+            height: 20px;
             margin-right: 8px;
+            filter: brightness(0) invert(1);
         }
 
-        @media screen and (max-width: 768px) {
+        /* Tablet & Desktop Views */
+        @media (min-width: 768px) {
             body {
-                padding: 5px;
+                padding: 25px;
             }
 
+            .header {
+                padding: 15px;
+                gap: 20px;
+            }
+
+            .small-text {
+                font-size: 16px;
+            }
+
+            .address, .contact {
+                font-size: 16px;
+                padding: 15px;
+            }
+
+            .menu-table {
+                margin: 30px 0;
+            }
+
+            .menu-table th {
+                font-size: 16px;
+                padding: 16px;
+            }
+
+            .menu-table td {
+                font-size: 15px;
+                padding: 15px;
+            }
+
+            .contact-buttons {
+                flex-direction: row;
+                justify-content: center;
+                max-width: none;
+            }
+
+            .contact-button {
+                padding: 12px 25px;
+            }
+        }
+
+        /* Phone Landscape Optimization */
+        @media (max-width: 480px) and (orientation: landscape) {
+            body {
+                padding: 10px;
+            }
+            
+            .shop-name {
+                margin: 10px 0;
+            }
+        }
+
+        /* Horizontal Scroll for Mobile Tables */
+        @media (max-width: 767px) {
             .menu-table {
                 display: block;
                 overflow-x: auto;
@@ -117,37 +198,28 @@
                 -webkit-overflow-scrolling: touch;
             }
 
-            .contact-buttons {
-                flex-direction: column;
-                gap: 10px;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            .shop-name {
-                line-height: 1.3;
-            }
-
             .menu-table th,
             .menu-table td {
-                padding: 8px 4px;
+                min-width: 120px;
             }
         }
 
-        @media print {
-            body {
-                padding: 0;
+        /* Interaction States */
+        .contact-button:active {
+            transform: scale(0.98);
+        }
+
+        @media (hover: hover) {
+            .contact-button:hover {
+                background: #c0392b;
+                transform: translateY(-1px);
             }
 
-            .menu-table {
-                page-break-inside: avoid;
-            }
-
-            .footer {
-                display: none;
+            .menu-table tr:hover td {
+                background: #fff5f5;
             }
         }
-    </style>
+</style>
 </head>
 <body>
     <div class="header">
