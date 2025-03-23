@@ -3,147 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
-    <meta name="description" content="तुलसी राम जी पुचका वाला - Enjoy the most delicious and spicy Puchka (Golgappa) with fresh and crispy taste.">
-    <meta name="keywords" content="पुचका, गोलगप्पे, पानीपुरी, स्ट्रीट फूड, तुलसी राम जी पुचका, बेस्ट पुचका, चटपटा खाना, puchka, golgappa, panipuri, street food, best panipuri,Nawalgarh Puchka place,nawalgarhpuchakapalace , Nawalgarh Puchka , spicy snacks">
-    <meta name="author" content="Tulsi Ram Ji Puchka Wala">
-    <title>तुलसी राम जी पुचका वाला - सबसे स्वादिष्ट पानीपुरी</title>
-    
-    <!-- Open Graph (For better sharing on social media) -->
-    <meta property="og:title" content="तुलसी राम जी पुचका वाला - सबसे स्वादिष्ट पानीपुरी">
-    <meta property="og:description" content="सबसे स्वादिष्ट और मसालेदार पुचका का आनंद लें, ताजा और कुरकुरा!">
-    <meta property="og:url" content="https://nawalgarhpuchakapalace.com">
-  <style>
-     body {
-            font-family: Arial, sans-serif;
+    <title>तुलसी राम जी पुचका वाला</title>
+    <style>
+        /* Add Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        * {
+            box-sizing: border-box;
             margin: 0;
-            padding: 10px;
-            text-align: center;
-            max-width: 1200px;
-            margin: 0 auto;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            padding: 15px;
+            background: #fff5f5;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            background-color: #fff3f3;
-            opacity: 0;
-            animation: fadeIn 1s forwards;
         }
 
-        /* Fade-in animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Header */
+        /* Header Section */
         .header {
-            color: red;
-            margin-bottom: 20px;
+            background: white;
+            padding: 12px;
+            border-radius: 12px;
+            margin: 10px 0;
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
-            opacity: 0;
-            animation: fadeIn 1.2s forwards 0.5s;
+            gap: 8px;
+            box-shadow: 0 2px 8px rgba(231, 76, 60, 0.1);
         }
 
         .small-text {
-            color: red;
-            font-size: clamp(1rem, 2vw, 1.2em);
-            margin: 10px 0;
-            font-weight: bold;
+            color: #e74c3c;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
         }
 
+        /* Shop Name */
         .shop-name {
-            color: red;
-            font-size: clamp(1.5rem, 5vw, 3em);
-            font-weight: bold;
+            color: #c0392b;
+            font-size: clamp(1.8rem, 6vw, 2.5rem);
+            font-weight: 700;
             margin: 20px 0;
-            opacity: 0;
-            animation: fadeIn 1.5s forwards 0.8s;
+            text-align: center;
+            line-height: 1.3;
+            padding: 0 10px;
         }
 
+        /* Address & Contact */
         .address, .contact {
-            color: red;
-            font-size: clamp(0.9rem, 1.8vw, 1.1em);
-            opacity: 0;
-            animation: fadeIn 1.7s forwards 1s;
+            color: #e74c3c;
+            font-size: 15px;
+            margin: 10px 0;
+            padding: 12px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            line-height: 1.5;
         }
 
-        /* Menu table */
+        /* Menu Table - Mobile First */
         .menu-table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
-            font-size: clamp(0.8rem, 1.5vw, 1em);
-            margin-bottom: 40px;
-            opacity: 0;
-            animation: fadeIn 2s forwards 1.2s;
+            margin: 20px 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .menu-table th,
+        .menu-table td {
+            padding: 12px;
+            text-align: center;
         }
 
         .menu-table th {
-            background-color: red;
+            background: #e74c3c;
             color: white;
-            padding: 10px;
-            border: 1px solid #ddd;
-            transition: transform 0.3s ease-in-out;
+            font-size: 14px;
+            font-weight: 600;
         }
 
         .menu-table td {
-            border: 1px solid red;
-            padding: 10px;
-            color: red;
-            transition: transform 0.3s ease-in-out;
+            color: #333;
+            border-bottom: 1px solid #ffe6e6;
+            font-size: 13px;
         }
 
-        /* Hover effect on table */
-        .menu-table th:hover,
-        .menu-table td:hover {
-            background-color: #ffcccc;
-            transform: scale(1.05);
-        }
-
-        /* Footer */
+        /* Footer & Contact Buttons */
         .footer {
             margin-top: auto;
-            padding: 25px;
-            background-color: #ffebee;
-            border-radius: 10px;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            opacity: 0;
-            animation: fadeIn 2.5s forwards 1.5s;
+            padding: 20px 15px;
+            background: white;
         }
 
         .contact-buttons {
             display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 400px;
+            margin: 0 auto;
         }
 
         .contact-button {
-            display: inline-flex;
+            display: flex;
             align-items: center;
-            padding: 10px 20px;
-            background-color: red;
+            justify-content: center;
+            padding: 12px;
+            background: #e74c3c;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.1em;
-            transition: background-color 0.3s, transform 0.3s;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: transform 0.2s ease;
         }
 
-        .contact-button:hover {
-            background-color: darkred;
-            transform: scale(1.1);
+        .contact-button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            filter: brightness(0) invert(1);
         }
 
-        @media screen and (max-width: 768px) {
+        /* Tablet & Desktop Views */
+        @media (min-width: 768px) {
+            body {
+                padding: 25px;
+            }
+
+            .header {
+                padding: 15px;
+                gap: 20px;
+            }
+
+            .small-text {
+                font-size: 16px;
+            }
+
+            .address, .contact {
+                font-size: 16px;
+                padding: 15px;
+            }
+
+            .menu-table {
+                margin: 30px 0;
+            }
+
+            .menu-table th {
+                font-size: 16px;
+                padding: 16px;
+            }
+
+            .menu-table td {
+                font-size: 15px;
+                padding: 15px;
+            }
+
+            .contact-buttons {
+                flex-direction: row;
+                justify-content: center;
+                max-width: none;
+            }
+
+            .contact-button {
+                padding: 12px 25px;
+            }
+        }
+
+        /* Phone Landscape Optimization */
+        @media (max-width: 480px) and (orientation: landscape) {
+            body {
+                padding: 10px;
+            }
+            
+            .shop-name {
+                margin: 10px 0;
+            }
+        }
+
+        /* Horizontal Scroll for Mobile Tables */
+        @media (max-width: 767px) {
             .menu-table {
                 display: block;
                 overflow-x: auto;
@@ -151,37 +198,28 @@
                 -webkit-overflow-scrolling: touch;
             }
 
-            .contact-buttons {
-                flex-direction: column;
-                gap: 10px;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            .shop-name {
-                line-height: 1.3;
-            }
-
             .menu-table th,
             .menu-table td {
-                padding: 8px 4px;
+                min-width: 120px;
             }
         }
 
-        @media print {
-            body {
-                padding: 0;
+        /* Interaction States */
+        .contact-button:active {
+            transform: scale(0.98);
+        }
+
+        @media (hover: hover) {
+            .contact-button:hover {
+                background: #c0392b;
+                transform: translateY(-1px);
             }
 
-            .menu-table {
-                page-break-inside: avoid;
-            }
-
-            .footer {
-                display: none;
+            .menu-table tr:hover td {
+                background: #fff5f5;
             }
         }
-  </style>
+</style>
 </head>
 <body>
     <div class="header">
@@ -195,8 +233,6 @@
     <div class="address">मुख्य बाजार, नवलगढ़ ॥ रावल साहब की कोठी के पास, नवलगढ़</div>
     <div class="contact">प्रो. प्रेम कुमार  सैनी ॥ मो. 9983511717</div>
 
-
-    <main>
     <table class="menu-table">
         <tr>
             <th>नार्थ इंडियन</th>
@@ -286,10 +322,7 @@
        
     </table>
 
-</main>
-
     <footer class="footer">
-        
         <div class="contact-buttons">
             <a href="tel:+919983511717" class="contact-button">
                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z'/%3E%3C/svg%3E" alt="Phone">
