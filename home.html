@@ -5,192 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>तुलसी राम जी पुचका वाला</title>
     <style>
-        /* Add Google Fonts */
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         body {
-            font-family: 'Poppins', sans-serif;
-            padding: 15px;
-            background: #fff5f5;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
         }
 
-        /* Header Section */
         .header {
-            background: white;
-            padding: 12px;
-            border-radius: 12px;
-            margin: 10px 0;
+            color: red;
+            margin-bottom: 20px;
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 8px;
-            box-shadow: 0 2px 8px rgba(231, 76, 60, 0.1);
+            gap: 20px;
+
         }
 
         .small-text {
-            color: #e74c3c;
-            font-size: 14px;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            white-space: nowrap;
-        }
-
-        /* Shop Name */
-        .shop-name {
-            color: #c0392b;
-            font-size: clamp(1.8rem, 6vw, 2.5rem);
-            font-weight: 700;
-            margin: 20px 0;
-            text-align: center;
-            line-height: 1.3;
-            padding: 0 10px;
-        }
-
-        /* Address & Contact */
-        .address, .contact {
-            color: #e74c3c;
-            font-size: 15px;
+            color: red;
+            font-size: clamp(1rem, 2vw, 1.2em);
             margin: 10px 0;
-            padding: 12px;
-            background: white;
-            border-radius: 8px;
-            text-align: center;
-            line-height: 1.5;
+            font-weight: bold;
+        
         }
 
-        /* Menu Table - Mobile First */
+        .shop-name {
+            color: red;
+            font-size: clamp(1.5rem, 5vw, 3em);
+            font-weight: bold;
+            margin: 20px 0;
+            word-wrap: break-word;
+        }
+
+        .address {
+            color: red;
+            margin: 10px 0;
+            font-size: clamp(0.9rem, 1.8vw, 1.1em);
+        }
+
+        .contact {
+            color: red;
+            margin: 10px 0;
+            font-size: clamp(0.9rem, 1.8vw, 1.1em);
+        }
+
         .menu-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            font-size: clamp(0.8rem, 1.5vw, 1em);
+            margin-bottom: 40px;
         }
 
-        .menu-table th,
-        .menu-table td {
-            padding: 12px;
-            text-align: center;
-        }
+
 
         .menu-table th {
-            background: #e74c3c;
+            background-color: red;
             color: white;
-            font-size: 14px;
-            font-weight: 600;
+            padding: clamp(5px, 1.5vw, 10px);
+            border: 1px solid #ddd;
         }
 
         .menu-table td {
-            color: #333;
-            border-bottom: 1px solid #ffe6e6;
-            font-size: 13px;
+            border: 1px solid red;
+            padding: clamp(5px, 1.5vw, 10px);
+            color: red;
         }
 
-        /* Footer & Contact Buttons */
         .footer {
             margin-top: auto;
-            padding: 20px 15px;
-            background: white;
+
+            padding: 25px;
+            background-color: #ffebee;
+            
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
 
         .contact-buttons {
             display: flex;
-            flex-direction: column;
-            gap: 12px;
-            max-width: 400px;
-            margin: 0 auto;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
         .contact-button {
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            padding: 12px;
-            background: #e74c3c;
+            padding: 10px 20px;
+            background-color: red;
             color: white;
             text-decoration: none;
-            border-radius: 8px;
-            font-size: 15px;
-            transition: transform 0.2s ease;
+            border-radius: 5px;
+            font-size: clamp(0.9rem, 1.8vw, 1.1em);
+            transition: background-color 0.3s;
+        }
+
+        .contact-button:hover {
+            background-color: darkred;
         }
 
         .contact-button img {
-            width: 20px;
-            height: 20px;
+            width: 24px;
+            height: 24px;
             margin-right: 8px;
-            filter: brightness(0) invert(1);
         }
 
-        /* Tablet & Desktop Views */
-        @media (min-width: 768px) {
+        @media screen and (max-width: 768px) {
             body {
-                padding: 25px;
+                padding: 5px;
             }
 
-            .header {
-                padding: 15px;
-                gap: 20px;
-            }
-
-            .small-text {
-                font-size: 16px;
-            }
-
-            .address, .contact {
-                font-size: 16px;
-                padding: 15px;
-            }
-
-            .menu-table {
-                margin: 30px 0;
-            }
-
-            .menu-table th {
-                font-size: 16px;
-                padding: 16px;
-            }
-
-            .menu-table td {
-                font-size: 15px;
-                padding: 15px;
-            }
-
-            .contact-buttons {
-                flex-direction: row;
-                justify-content: center;
-                max-width: none;
-            }
-
-            .contact-button {
-                padding: 12px 25px;
-            }
-        }
-
-        /* Phone Landscape Optimization */
-        @media (max-width: 480px) and (orientation: landscape) {
-            body {
-                padding: 10px;
-            }
-            
-            .shop-name {
-                margin: 10px 0;
-            }
-        }
-
-        /* Horizontal Scroll for Mobile Tables */
-        @media (max-width: 767px) {
             .menu-table {
                 display: block;
                 overflow-x: auto;
@@ -198,28 +128,37 @@
                 -webkit-overflow-scrolling: touch;
             }
 
+            .contact-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .shop-name {
+                line-height: 1.3;
+            }
+
             .menu-table th,
             .menu-table td {
-                min-width: 120px;
+                padding: 8px 4px;
             }
         }
 
-        /* Interaction States */
-        .contact-button:active {
-            transform: scale(0.98);
-        }
-
-        @media (hover: hover) {
-            .contact-button:hover {
-                background: #c0392b;
-                transform: translateY(-1px);
+        @media print {
+            body {
+                padding: 0;
             }
 
-            .menu-table tr:hover td {
-                background: #fff5f5;
+            .menu-table {
+                page-break-inside: avoid;
+            }
+
+            .footer {
+                display: none;
             }
         }
-</style>
+    </style>
 </head>
 <body>
     <div class="header">
@@ -231,8 +170,10 @@
     <div class="shop-name">तुलसी राम जी पुचका वाला</div>
     
     <div class="address">मुख्य बाजार, नवलगढ़ ॥ रावल साहब की कोठी के पास, नवलगढ़</div>
-    <div class="contact">प्रो. प्रेम कुमार  सैनी ॥ मो. 9983511717</div>
+    <div class="contact">मो. प्रेम कुमार सैनी ॥ मो. 9983511717</div>
 
+
+    <main>
     <table class="menu-table">
         <tr>
             <th>नार्थ इंडियन</th>
@@ -322,7 +263,10 @@
        
     </table>
 
+</main>
+
     <footer class="footer">
+        
         <div class="contact-buttons">
             <a href="tel:+919983511717" class="contact-button">
                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z'/%3E%3C/svg%3E" alt="Phone">
